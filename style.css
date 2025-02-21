@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+  background-color: #121212; /* Dark background */
+  color: #00f; /* Blue text */
+  font-size: 24px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* 3D Flashing Blue Text */
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #00f; /* Base blue color */
+  text-shadow: 
+    2px 2px 0px #0000ff, 
+    4px 4px 0px #0000cc, 
+    6px 6px 0px #000099; /* 3D effect */
+  
+  animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    text-shadow: 
+      2px 2px 0px #0000ff, 
+      4px 4px 0px #0000cc, 
+      6px 6px 0px #000099;
+  }
+  100% {
+    text-shadow: 
+      2px 2px 10px #00f, 
+      4px 4px 10px #00c, 
+      6px 6px 15px #009;
+  }
+}
+
+/* Header */
+header {
+  color: #FFFFFF;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  text-shadow: 0px 0px 20px #FFFFFF;
+  font-size: 2rem;
+  padding: 15px;
+}
+
+.title img {
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+.hh-title {
+  text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 10px; /* Fixed missing unit */
+}
+
+/* Form Inputs */
+form#console {
+  text-align: center;
+}
+
+.Ilabel, .input_text, .input_texts {
+  display: inline-block;
+  font-family: 'Gaegu', cursive;
+  font-size: 19px;
+}
+
+.Ilabel {
+  background-color: #4d4f53;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  border-bottom: 2px solid #00FFEE; /* Fixed invalid border */
+  color: #FFFFFF;
+}
+
+.input_text {
+  padding: 6px;
+  border: 0;
+  border-bottom: 2px solid #00FFEE;
+  border-right: 2px solid #00FFEE;
+  border-radius: 0 5px 5px 0;
+  vertical-align: bottom;
+  outline: none;
+  font-size: 17px;
+}
+
+select.input_text {
+  margin-left: -5px;
+  font-size: 16px;
+  background: white;
+}
+
+.p {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.s {
+  margin-left: -5px;
+  background: white;
+  padding: 5.5px;
+}
+
+.input_text > label {
+  cursor: pointer;
+}
+
+/* Clear Button */
+.clean, .cleanit {
+  background: #4d4f53 url('../img/close.png') no-repeat center;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  float: right;
+  transition: all 0.5s;
+}
+
+.clean:hover, .cleanit:hover {
+  background: rgba(0, 0, 0, 0.87) url('../img/close.png') no-repeat center;
+  transform: rotate(360deg);
+}
+
+/* Adjust Width */
+.eighty {
+  width: 76%;
+}
+
+/* Button */
+.Lbutton {
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  border-radius: 6px;
+  border: 1px solid #00FFEE;
+  cursor: pointer;
+  color: #2D7681;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 40px;
+  text-decoration: none;
+}
+
+.Lbutton:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+}
+
+.Lbutton:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Textarea */
+.textarea {
+  border-bottom: 2px solid #00FFEE;
+  border-top: 2px solid #00FFEE;
+  width: 100%;
+  font-size: 17px;
+  font-family: 'Gaegu', cursive;
+  overflow-y: scroll;
+  outline: none;
+}
+
+.textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: #4d4f53;
+}
+
+/* Footer */
+footer {
+  background: #2b2e2f;
+  text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  color: #ffffff;
+  padding: 5px;
+  font-size: 13px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 376px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .Ilabel {
+    width: 90%;
+    border-radius: 0;
+  }
+
+  .input_text {
+    width: 80%;
+    border-radius: 0;
+    text-align: center;
+    border-right: 0;
+  }
+
+  .inline {
+    width: 40%;
+  }
+
+  .hh {
+    text-align: center;
+  }
+}
+
+@media (max-width: 595px) {
+  .form {
+    width: 99%;
+    margin: 5px 0;
+  }
+}
